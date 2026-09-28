@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>study_buddy_behavior</name>
+  <version>0.0.0</version>
+  <description>Study Buddy Pupper: behavior FSM. Subscribes to presence topics (from study_zone_detector) and drives the robot's expressive behavior -- countdown, sleep, wake, speech.</description>
+  <maintainer email="ritalike4399@gmail.com">your name</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <!-- Only needed when USE_PUPPER_SERVICE = True (the FSM moves the robot). -->
+  <exec_depend>pupper_interfaces</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

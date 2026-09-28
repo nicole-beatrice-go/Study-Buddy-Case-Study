@@ -1,0 +1,129 @@
+[0.777s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'study_buddy_behavior'][0m
+[0.778s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['study_buddy_behavior'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff861b9c00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff863b8430>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff863b8430>>)[0m
+[2.055s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[2.055s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[2.056s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[2.056s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[2.056s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[2.056s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[2.056s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/ubuntu/ros2_ws/src/Study-Buddy'
+[2.057s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.057s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[2.058s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[2.058s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[2.058s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[2.058s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[2.059s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[2.059s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[2.059s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[2.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[2.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[2.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[2.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[2.118s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[2.118s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.119s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[2.119s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[2.120s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.120s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[2.120s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[2.121s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.121s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[2.121s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[2.122s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.122s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[2.122s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[2.123s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[2.123s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[2.123s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[2.123s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[2.123s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[2.124s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[2.124s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[2.124s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[2.124s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[2.124s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[2.125s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[2.125s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extensions ['ignore', 'ignore_ament_install']
+[2.126s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extension 'ignore'
+[2.126s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extension 'ignore_ament_install'
+[2.126s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extensions ['colcon_pkg']
+[2.126s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extension 'colcon_pkg'
+[2.126s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extensions ['colcon_meta']
+[2.127s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extension 'colcon_meta'
+[2.127s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extensions ['ros']
+[2.127s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_behavior) by extension 'ros'
+[2.137s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/study_buddy_behavior' with type 'ros.ament_python' and name 'study_buddy_behavior'[0m
+[2.138s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extensions ['ignore', 'ignore_ament_install']
+[2.139s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extension 'ignore'
+[2.139s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extension 'ignore_ament_install'
+[2.139s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extensions ['colcon_pkg']
+[2.140s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extension 'colcon_pkg'
+[2.140s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extensions ['colcon_meta']
+[2.140s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extension 'colcon_meta'
+[2.140s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extensions ['ros']
+[2.140s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_buddy_speech) by extension 'ros'
+[2.143s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/study_buddy_speech' with type 'ros.ament_python' and name 'study_buddy_speech'[0m
+[2.144s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extensions ['ignore', 'ignore_ament_install']
+[2.144s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extension 'ignore'
+[2.144s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extension 'ignore_ament_install'
+[2.145s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extensions ['colcon_pkg']
+[2.145s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extension 'colcon_pkg'
+[2.145s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extensions ['colcon_meta']
+[2.145s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extension 'colcon_meta'
+[2.145s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extensions ['ros']
+[2.145s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/study_zone_detector) by extension 'ros'
+[2.148s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/study_zone_detector' with type 'ros.ament_python' and name 'study_zone_detector'[0m
+[2.148s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[2.149s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[2.149s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[2.149s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[2.149s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[2.221s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'study_buddy_speech' in 'src/study_buddy_speech'
+[2.221s] [34mcolcon.colcon_core.package_selection[0m [1;30mINFO[0m Skipping not selected package 'study_zone_detector' in 'src/study_zone_detector'
+[2.223s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[2.223s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[2.243s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 23 installed packages in /home/ubuntu/ros2_ws/install[0m
+[2.247s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 2 installed packages in /home/ubuntu/ros2_ws/src/install[0m
+[2.259s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 302 installed packages in /opt/ros/humble[0m
+[2.267s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[2.483s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'cmake_args' from command line to 'None'
+[2.483s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'cmake_target' from command line to 'None'
+[2.483s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.483s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'cmake_clean_cache' from command line to 'False'
+[2.484s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'cmake_clean_first' from command line to 'False'
+[2.484s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'cmake_force_configure' from command line to 'False'
+[2.484s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'ament_cmake_args' from command line to 'None'
+[2.484s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'catkin_cmake_args' from command line to 'None'
+[2.484s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'study_buddy_behavior' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.484s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'study_buddy_behavior' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ros2_ws/src/Study-Buddy/build/study_buddy_behavior', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ros2_ws/src/Study-Buddy/install/study_buddy_behavior', 'merge_install': False, 'path': '/home/ubuntu/ros2_ws/src/Study-Buddy/src/study_buddy_behavior', 'symlink_install': False, 'test_result_base': None}[0m
+[2.485s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[2.489s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[2.490s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/ubuntu/ros2_ws/src/Study-Buddy/src/study_buddy_behavior' with build type 'ament_python'
+[2.490s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('study_buddy_behavior', 'ament_prefix_path')
+[2.504s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.505s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/src/Study-Buddy/install/study_buddy_behavior/share/study_buddy_behavior/hook/ament_prefix_path.ps1'
+[2.512s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/src/Study-Buddy/install/study_buddy_behavior/share/study_buddy_behavior/hook/ament_prefix_path.dsv'
+[2.515s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/src/Study-Buddy/install/study_buddy_behavior/share/study_buddy_behavior/hook/ament_prefix_path.sh'
+[2.519s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.519s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[3.245s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete was interrupted[0m
+[3.247s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete again[0m
+[3.248s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished[0m
+[3.248s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[3.249s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[3.249s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[3.287s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.288s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.288s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[3.367s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[3.369s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/local_setup.ps1'
+[3.373s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ubuntu/ros2_ws/src/Study-Buddy/install/_local_setup_util_ps1.py'
+[3.383s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/setup.ps1'
+[3.397s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/local_setup.sh'
+[3.400s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ubuntu/ros2_ws/src/Study-Buddy/install/_local_setup_util_sh.py'
+[3.403s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/setup.sh'
+[3.418s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/local_setup.bash'
+[3.420s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/setup.bash'
+[3.435s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/local_setup.zsh'
+[3.438s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/src/Study-Buddy/install/setup.zsh'

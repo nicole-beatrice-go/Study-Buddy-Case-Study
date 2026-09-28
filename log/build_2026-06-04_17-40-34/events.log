@@ -1,0 +1,14 @@
+[0.000000] (-) TimerEvent: {}
+[0.000958] (-) JobUnselected: {'identifier': 'study_buddy_speech'}
+[0.001776] (-) JobUnselected: {'identifier': 'study_zone_detector'}
+[0.002020] (study_buddy_behavior) JobQueued: {'identifier': 'study_buddy_behavior', 'dependencies': OrderedDict()}
+[0.002214] (study_buddy_behavior) JobStarted: {'identifier': 'study_buddy_behavior'}
+[0.097481] (-) TimerEvent: {}
+[0.198177] (-) TimerEvent: {}
+[0.298867] (-) TimerEvent: {}
+[0.399667] (-) TimerEvent: {}
+[0.500383] (-) TimerEvent: {}
+[0.601048] (-) TimerEvent: {}
+[0.701728] (-) TimerEvent: {}
+[0.755622] (study_buddy_behavior) JobEnded: {'identifier': 'study_buddy_behavior', 'rc': 0}
+[0.759666] (-) EventReactorShutdown: {}

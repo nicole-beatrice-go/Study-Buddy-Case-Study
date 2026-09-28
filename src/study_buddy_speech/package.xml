@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>study_buddy_speech</name>
+  <version>0.0.0</version>
+  <description>Study Buddy Pupper: speech recognition node. Captures voice from a USB mic, transcribes with local Whisper, and publishes parsed intents (pause / resume / add-to-do) for the behavior controller (study_buddy_fsm). Also speaks short prompts back through the speaker.</description>
+  <maintainer email="ritalike4399@gmail.com">your name</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <!-- ASR / audio / TTS libs are pip-installed, not rosdep packages: -->
+  <!--   pip install faster-whisper sounddevice numpy                  -->
+  <!--   sudo apt install espeak-ng        (text-to-speech backend)    -->
+  <!--   pip install gpiozero lgpio        (only for the push-to-talk button) -->
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

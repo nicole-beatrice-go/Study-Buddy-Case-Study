@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Buddy — Display FSM Flowchart</title>
+  <style>
+    body {
+      font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      color: #1b1f23;
+      line-height: 1.5;
+    }
+    h1 { font-size: 1.6rem; }
+    h2 { margin-top: 2.5rem; border-bottom: 1px solid #e1e4e8; padding-bottom: .3rem; }
+    .card {
+      border: 1px solid #e1e4e8;
+      border-radius: 8px;
+      padding: 1rem;
+      background: #fafbfc;
+      overflow-x: auto;
+    }
+    .note { color: #57606a; font-size: .92rem; }
+    code { background: #eff1f3; padding: .1rem .3rem; border-radius: 4px; }
+    .legend span { display: inline-block; margin-right: 1rem; white-space: nowrap; }
+    .swatch { display: inline-block; width: .8rem; height: .8rem; border-radius: 2px; vertical-align: middle; margin-right: .3rem; }
+  </style>
+</head>
+<body>
+  <h1>Study Buddy — Display FSM</h1>
+  <p class="note">
+    What the Mini Pupper LCD shows during a study session. The number (whole minutes
+    remaining) is redrawn only when the minute changes (~once/min) to keep the slow
+    framebuffer push cheap; faces are picked by <code>refresh_mood()</code>, with
+    presence faces (<code>worried</code>/<code>sleepy</code>) taking priority.
+  </p>
+  <p class="legend">
+    <span><span class="swatch" style="background:#dbe9ff"></span>decision / state</span>
+    <span><span class="swatch" style="background:#d6f5d6"></span>show NUMBER</span>
+    <span><span class="swatch" style="background:#ffe9c7"></span>show FACE</span>
+  </p>
+
+  <h2>1. Per-tick decision: NUMBER vs FACE</h2>
+  <div class="card">
+    <pre class="mermaid">
+flowchart TD
+  A["step - each tick"] --> B{"state == STUDYING<br/>AND phase == study<br/>AND not paused<br/>AND now &gt;= face_until"}
+  B -- yes --> C["SHOW NUMBER<br/>minutes = ceil of time_left / 60"]
+  C --> D{"minute changed?"}
+  D -- yes --> E["publish Int32 minutes<br/>to expression node"]
+  D -- no --> F["do nothing"]
+  B -- no --> G["SHOW FACE<br/>refresh_mood picks one"]
+  G --> H{"which face?"}
+  H -- paused --> I["SAD"]
+  H -- break phase --> J["HAPPY"]
+  H -- start 1s flash --> K["NEUTRAL"]
+  H -- user left --> L["WORRIED"]
+  H -- asleep --> M["SLEEPY"]
+
+  classDef num fill:#d6f5d6,stroke:#34a853;
+  classDef face fill:#ffe9c7,stroke:#e8902a;
+  classDef dec fill:#dbe9ff,stroke:#4374e0;
+  class C,E num;
+  class G,I,J,K,L,M face;
+  class B,D,H dec;
+    </pre>
+  </div>
+
+  <h2>2. Session lifecycle: face / number over time</h2>
+  <div class="card">
+    <pre class="mermaid">
+flowchart TD
+  S["tap + present"] --> N1["NEUTRAL face<br/>~1 s flash"]
+  N1 --> NUM["NUMBER 24 ... 1<br/>update each minute"]
+  NUM -- voice pause --> SAD["SAD face<br/>held until resume"]
+  SAD -- voice resume --> NUM
+  NUM -- study timer hits 0 --> HAPPY["HAPPY face<br/>break phase"]
+  HAPPY -- break over --> START["START<br/>happy, wait for tap"]
+  START --> S
+
+  classDef num fill:#d6f5d6,stroke:#34a853;
+  classDef face fill:#ffe9c7,stroke:#e8902a;
+  class NUM num;
+  class N1,SAD,HAPPY,START face;
+    </pre>
+  </div>
+
+  <h2>3. Presence interrupts (priority over the number)</h2>
+  <div class="card">
+    <pre class="mermaid">
+flowchart TD
+  NUM["STUDYING<br/>showing NUMBER"] -- user leaves --> CD["COUNTDOWN<br/>WORRIED face<br/>timer PAUSED"]
+  CD -- returns in time --> NUM
+  CD -- grace hits 0 --> SLP["SLEEPING<br/>SLEEPY face"]
+  SLP -- user returns --> SAD2["STUDYING_SAD"] --> NUM
+
+  classDef num fill:#d6f5d6,stroke:#34a853;
+  classDef face fill:#ffe9c7,stroke:#e8902a;
+  class NUM num;
+  class CD,SLP,SAD2 face;
+    </pre>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+</body>
+</html>
