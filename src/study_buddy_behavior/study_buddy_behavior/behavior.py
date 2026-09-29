@@ -167,7 +167,6 @@ class PupperBehavior:
         if self.disp is None:
             self.node.get_logger().info(f'[TIMER] {text}')
             return
-        # Lazy PIL import: only the on-robot path needs it (mirrors __init__).
         from PIL import Image, ImageDraw, ImageFont
         w = cfg.DISPLAY_WIDTH
         img = Image.new('RGB', (w, w), 'black')
