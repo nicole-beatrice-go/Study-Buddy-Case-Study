@@ -2,7 +2,7 @@
 # expression_node.py
 #
 # Study Buddy Pupper -- expression node.
-# Group: <your team name>
+# Group:
 #
 # Purpose:
 #   The single owner of the robot's output hardware (face display, legs, audio).
