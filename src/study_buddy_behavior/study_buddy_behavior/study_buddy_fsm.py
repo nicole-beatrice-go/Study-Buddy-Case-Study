@@ -8,8 +8,7 @@
 #                                        apply_focus_gate, _present).
 #   Lele Zhao, l5zhao@ucsd.edu -- <their FSM contribution, e.g. core state
 #                                        machine + Pomodoro session logic>.
-#   <Teammate Name>, <email@ucsd.edu> -- <their FSM contribution, e.g. voice
-#                                        intents + expression/timer output>.
+#   <Nicole Go>, <nbgo@ucsd.edu> -- <behavior and pomodoro timer integration>.
 #
 # Description:
 #   Study Buddy Pupper -- Behavior FSM node. This is the "brain" that reacts to
